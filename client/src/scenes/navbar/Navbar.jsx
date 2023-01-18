@@ -25,7 +25,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setMode, setLogout } from "../../state";
 import { useNavigate } from "react-router-dom";
 import FlexBetween from "../../components/FlexBetween";
-import icon from "../../../public/icon.png";
+import icon from "/src/assets/icon.png";
 
 const Navbar = () => {
   const [isMobileMenuToggled, setIsMobileMenuToggled] = useState(false);
@@ -67,7 +67,7 @@ const Navbar = () => {
               height: "0.75rem",
               width: "0.75rem",
             }}
-            alt="The house from the offer."
+            alt="Socially logo"
             src={icon}
           />
         </Typography>
