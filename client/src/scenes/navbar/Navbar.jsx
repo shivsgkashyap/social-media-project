@@ -64,7 +64,6 @@ const Navbar = () => {
             component="img"
             sx={{
               ml: "0.1rem",
-              height: "0.75rem",
               width: "0.75rem",
             }}
             alt="Socially logo"
