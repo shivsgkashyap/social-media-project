@@ -1,4 +1,6 @@
 import { Box, Typography, useTheme, useMediaQuery } from "@mui/material";
+import Form from "./Form";
+import icon from "/src/assets/icon.png";
 
 const LoginPage = () => {
   const theme = useTheme();
@@ -14,6 +16,14 @@ const LoginPage = () => {
         <Typography fontWeight="bold" fontSize="32px" color="primary">
           Socially
         </Typography>
+        <Box
+          component="img"
+          sx={{
+            width: "2rem",
+          }}
+          alt="Socially logo"
+          src={icon}
+        />
       </Box>
 
       <Box
