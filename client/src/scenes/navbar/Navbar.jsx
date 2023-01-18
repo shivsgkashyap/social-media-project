@@ -25,6 +25,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setMode, setLogout } from "../../state";
 import { useNavigate } from "react-router-dom";
 import FlexBetween from "../../components/FlexBetween";
+import icon from "../../../public/icon.png";
 
 const Navbar = () => {
   const [isMobileMenuToggled, setIsMobileMenuToggled] = useState(false);
@@ -40,7 +41,7 @@ const Navbar = () => {
   const primaryLight = theme.palette.primary.light;
   const alt = theme.palette.background.alt;
 
-  const fullName = `${user.firstName} ${user.lastName}`;
+  const fullName = `Fake Person`;
 
   return (
     <FlexBetween padding="1rem 6%" backgroundColor={alt}>
@@ -51,13 +52,24 @@ const Navbar = () => {
           color="primary"
           onClick={() => navigate("/home")}
           sx={{
-            "&hover": {
+            mr: 1,
+            "&:hover": {
               color: primaryLight,
               cursor: "pointer",
             },
           }}
         >
-          Socially.
+          Socially
+          <Box
+            component="img"
+            sx={{
+              ml: "0.1rem",
+              height: "0.75rem",
+              width: "0.75rem",
+            }}
+            alt="The house from the offer."
+            src={icon}
+          />
         </Typography>
         {isNonMobileScreens && (
           <FlexBetween
@@ -66,7 +78,7 @@ const Navbar = () => {
             gap="3rem"
             padding="0.1rem 1.5rem"
           >
-            <Input placeholder="Search..." />
+            <InputBase placeholder="Search..." />
             <IconButton>
               <Search />
             </IconButton>
