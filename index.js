@@ -37,12 +37,6 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
 app.use("/assets", express.static(path.join(__dirname, "public/assets")));
 
-app.use(express.static(path.join(__dirname, "client/dist")));
-
-app.get("*", (req, res) =>
-  res.sendFile(path.join(__dirname, "client", "dist", "index.html"))
-);
-
 /* FILE STORAGE */
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -62,6 +56,12 @@ app.post("/api/posts", verifyToken, upload.single("picture"), createPost);
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/posts", postRoutes);
+
+app.use(express.static(path.join(__dirname, "client/dist")));
+
+app.get("*", (req, res) =>
+  res.sendFile(path.join(__dirname, "client", "dist", "index.html"))
+);
 
 /* MONGOOSE SETUP */
 const PORT = process.env.PORT || 6001;
