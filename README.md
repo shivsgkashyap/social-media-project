@@ -2,7 +2,7 @@
 
 COMPLETE Fullstack MERN Responsive Social Media Application built from Scratch. React + Redux frontend and Node.js + Express REST API with MongoDB. Includes register/login function with JWT authorization and bcrypt password encryption. Please note: this app is hosted on Cyclic.sh and may take a few seconds to fully load.
 
-# [LIVE DEMO](https://aggressive-crab-slip.cyclic.app/) :point_left:
+# [LIVE DEMO](https://silly-hen-tux.cyclic.app/) :point_left:
 
 ## Project Specifications
 
