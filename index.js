@@ -39,7 +39,9 @@ app.use("/assets", express.static(path.join(__dirname, "public/assets")));
 
 app.use(express.static("client/dist"));
 
-app.get("*", (req, res) => res.sendFile("client/dist/index.html"));
+app.get("*", (req, res) =>
+  res.sendFile(path.join(__dirname, "client/dist/index.html"))
+);
 
 /* FILE STORAGE */
 const storage = multer.diskStorage({
