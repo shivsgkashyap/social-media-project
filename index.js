@@ -20,7 +20,7 @@ import { users, posts } from "./data/index.js";
 
 /* CONFIGURATIONS */
 const __filename = fileURLToPath(import.meta.url);
-const dirname = path.dirname(__filename);
+const fileDirname = path.dirname(__filename);
 dotenv.config();
 const app = express();
 app.use(express.json());
@@ -35,7 +35,7 @@ app.use(morgan("common"));
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
-app.use("/assets", express.static(path.join(dirname, "public/assets")));
+app.use("/assets", express.static(path.join(fileDirname, "public/assets")));
 
 app.use(express.static("client/dist"));
 
