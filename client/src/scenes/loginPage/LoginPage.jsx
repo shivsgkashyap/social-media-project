@@ -38,6 +38,21 @@ const LoginPage = () => {
         </Typography>
         <Form />
       </Box>
+
+      <Box
+        width={isNonMobileScreens ? "50%" : "93%"}
+        p="2rem"
+        m="2rem auto"
+        borderRadius="1.5rem"
+        backgroundColor={theme.palette.background.alt}
+      >
+        <Typography fontWeight="500" variant="h5" sx={{ mb: "0.5rem" }}>
+          Registration is required but if you would like to test the app
+          features without registering please use the following credentials:
+        </Typography>
+        <Typography variant="h5">Email: test@test.com</Typography>
+        <Typography variant="h5">Password: test</Typography>
+      </Box>
     </Box>
   );
 };
