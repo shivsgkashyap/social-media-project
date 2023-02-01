@@ -1,8 +1,10 @@
 # Full-Stack Social Media App (MERN)
 
+<img width="750" alt="Screenshot 2023-01-27 at 15 01 43" src="https://user-images.githubusercontent.com/89941894/216085352-51f1048e-e9b6-4609-b298-8448143266d3.png">
+
 COMPLETE Fullstack MERN Responsive Social Media Application built from Scratch. React + Redux frontend and Node.js + Express REST API with MongoDB. Includes register/login function with JWT authorization and bcrypt password encryption. Please note: this app is hosted on Cyclic.sh and may take a few seconds to fully load.
 
-# [LIVE DEMO](https://aggressive-crab-slip.cyclic.app/) :point_left:
+# [LIVE DEMO](https://silly-hen-tux.cyclic.app/) :point_left:
 
 ## Project Specifications
 
